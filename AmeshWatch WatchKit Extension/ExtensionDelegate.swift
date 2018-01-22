@@ -11,6 +11,9 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        print("now \(AmeshAPI().url(for: Date()))")
+
     }
 
     func applicationDidBecomeActive() {

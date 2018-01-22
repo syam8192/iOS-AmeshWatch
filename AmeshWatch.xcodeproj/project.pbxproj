@@ -20,6 +20,10 @@
 		C65EFA042015825700B925AC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65EFA032015825700B925AC /* ExtensionDelegate.swift */; };
 		C65EFA062015825700B925AC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65EFA052015825700B925AC /* NotificationController.swift */; };
 		C65EFA082015825700B925AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65EFA072015825700B925AC /* Assets.xcassets */; };
+		C65EFA1A2015847700B925AC /* AmeshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65EFA192015847700B925AC /* AmeshAPI.swift */; };
+		C65EFA1B2015847700B925AC /* AmeshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65EFA192015847700B925AC /* AmeshAPI.swift */; };
+		C65EFA1D2015985B00B925AC /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65EFA1C2015985B00B925AC /* ImageLoader.swift */; };
+		C65EFA1E2015985B00B925AC /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65EFA1C2015985B00B925AC /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,8 @@
 		C65EFA072015825700B925AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C65EFA092015825700B925AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C65EFA0A2015825700B925AC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C65EFA192015847700B925AC /* AmeshAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmeshAPI.swift; sourceTree = "<group>"; };
+		C65EFA1C2015985B00B925AC /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		C65EF9DD2015825700B925AC /* AmeshWatch */ = {
 			isa = PBXGroup;
 			children = (
+				C65EFA182015845700B925AC /* APIManager */,
 				C65EF9DE2015825700B925AC /* AppDelegate.swift */,
 				C65EF9E02015825700B925AC /* ViewController.swift */,
 				C65EF9E22015825700B925AC /* Main.storyboard */,
@@ -157,6 +164,15 @@
 				C65EFA0A2015825700B925AC /* PushNotificationPayload.apns */,
 			);
 			path = "AmeshWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C65EFA182015845700B925AC /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				C65EFA192015847700B925AC /* AmeshAPI.swift */,
+				C65EFA1C2015985B00B925AC /* ImageLoader.swift */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +309,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65EFA1A2015847700B925AC /* AmeshAPI.swift in Sources */,
 				C65EF9E12015825700B925AC /* ViewController.swift in Sources */,
+				C65EFA1D2015985B00B925AC /* ImageLoader.swift in Sources */,
 				C65EF9DF2015825700B925AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +321,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C65EFA062015825700B925AC /* NotificationController.swift in Sources */,
+				C65EFA1B2015847700B925AC /* AmeshAPI.swift in Sources */,
+				C65EFA1E2015985B00B925AC /* ImageLoader.swift in Sources */,
 				C65EFA042015825700B925AC /* ExtensionDelegate.swift in Sources */,
 				C65EFA022015825700B925AC /* InterfaceController.swift in Sources */,
 			);
@@ -463,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = "AmeshWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp.watchkitextension;
@@ -471,7 +492,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -480,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = "AmeshWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp.watchkitextension;
@@ -488,7 +510,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -498,6 +520,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				IBSC_MODULE = AmeshWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "AmeshWatch WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp;
@@ -506,7 +529,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -516,6 +539,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				IBSC_MODULE = AmeshWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "AmeshWatch WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp;
@@ -524,7 +548,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -533,7 +557,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = AmeshWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,7 +573,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = AmeshWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

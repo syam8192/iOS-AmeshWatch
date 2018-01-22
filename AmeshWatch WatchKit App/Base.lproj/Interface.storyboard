@@ -17,8 +17,8 @@
                         <group width="1" height="1" alignment="left" layout="overlap" id="E1B-Je-Erb">
                             <items>
                                 <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFill" id="4J0-gK-VQH"/>
+                                <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFill" id="pIL-nj-VrB"/>
                                 <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFill" id="S0V-Vg-pWd"/>
-                                <imageView width="1" height="1" alignment="left" alpha="0.80000000000000004" contentMode="scaleAspectFill" id="pIL-nj-VrB"/>
                                 <label alignment="left" text="Label" textAlignment="center" id="YPt-uD-dhA"/>
                                 <button width="1" alignment="center" verticalAlignment="center" title="再試行" id="WMF-zC-Syp">
                                     <connections>

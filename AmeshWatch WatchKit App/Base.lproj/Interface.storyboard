@@ -20,14 +20,21 @@
                                 <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFill" id="S0V-Vg-pWd"/>
                                 <imageView width="1" height="1" alignment="left" alpha="0.80000000000000004" contentMode="scaleAspectFill" id="pIL-nj-VrB"/>
                                 <label alignment="left" text="Label" textAlignment="center" id="YPt-uD-dhA"/>
+                                <button width="1" alignment="center" verticalAlignment="center" title="再試行" id="WMF-zC-Syp">
+                                    <connections>
+                                        <action selector="onClickRetryButton" destination="AgC-eL-Hgc" id="rpA-jb-R0R"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
                     <connections>
                         <outlet property="ameshImageView" destination="pIL-nj-VrB" id="mgj-QK-y4O"/>
                         <outlet property="mapBGImageView" destination="4J0-gK-VQH" id="FzY-Oq-9oM"/>
+                        <outlet property="mapBaseGroup" destination="E1B-Je-Erb" id="4hR-eq-QP2"/>
                         <outlet property="mapInfoImageView" destination="S0V-Vg-pWd" id="dnj-f5-uBO"/>
                         <outlet property="messageLabel" destination="YPt-uD-dhA" id="6DM-sl-GT8"/>
+                        <outlet property="retryButton" destination="WMF-zC-Syp" id="chq-vz-uoO"/>
                     </connections>
                 </controller>
             </objects>

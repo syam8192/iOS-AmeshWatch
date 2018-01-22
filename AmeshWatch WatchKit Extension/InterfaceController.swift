@@ -11,11 +11,13 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var mapBaseGroup: WKInterfaceGroup!
     @IBOutlet var mapBGImageView: WKInterfaceImage!
     @IBOutlet var mapInfoImageView: WKInterfaceImage!
     @IBOutlet var ameshImageView: WKInterfaceImage!
     @IBOutlet var messageLabel: WKInterfaceLabel!
     
+    @IBOutlet var retryButton: WKInterfaceButton!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
     }
@@ -40,30 +42,35 @@ class InterfaceController: WKInterfaceController {
         ImageLoader.shared.load(with: AmeshAPI.mapInfoURL) { [weak self] image in
             self?.mapInfoImageView.setImage(image)
         }
-        showError(message: "Loading...")
+        showMessage("Loading...")
         ImageLoader.shared.load(with: ameshURL) { [weak self] image in
             guard let image = image else {
-                self?.showError(message: "取得できませんでした.")
+                self?.showMessage("取得できませんでした.", retryEnabled: true)
                 return
             }
-            self?.hideError()
+            self?.hideMessage()
             self?.ameshImageView.setImage(image)
         }
     }
+
+    @IBAction func onClickRetryButton() {
+        updateNow()
+    }
     
-    private func hideError() {
+    private func hideMessage() {
         mapInfoImageView.setHidden(false)
         mapBGImageView.setHidden(false)
         ameshImageView.setHidden(false)
         messageLabel.setHidden(true)
     }
-    
-    private func showError(message: String) {
+
+    private func showMessage(_ message: String, retryEnabled: Bool = false) {
         messageLabel.setText(message)
         mapInfoImageView.setHidden(true)
         mapBGImageView.setHidden(true)
         ameshImageView.setHidden(true)
         messageLabel.setHidden(false)
+        retryButton.setHidden(!retryEnabled)
     }
 
 }

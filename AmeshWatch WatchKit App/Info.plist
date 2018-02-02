@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.syam64.test.AmeshWatch</string>
+	<string>com.syam64.AmeshWatch</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

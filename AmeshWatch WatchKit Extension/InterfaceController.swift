@@ -9,15 +9,18 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WKCrownDelegate {
 
     @IBOutlet var mapBaseGroup: WKInterfaceGroup!
     @IBOutlet var mapBGImageView: WKInterfaceImage!
     @IBOutlet var mapInfoImageView: WKInterfaceImage!
     @IBOutlet var ameshImageView: WKInterfaceImage!
     @IBOutlet var messageLabel: WKInterfaceLabel!
-    
     @IBOutlet var retryButton: WKInterfaceButton!
+
+    private var isCrownRotating: Bool = false
+
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
     }
@@ -25,7 +28,7 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+        crownSequencer.focus()
         updateNow()
     }
 
@@ -73,5 +76,33 @@ class InterfaceController: WKInterfaceController {
         retryButton.setHidden(!retryEnabled)
     }
 
+    
+    func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
+        
+        if !isCrownRotating {
+            
+            if rotationalDelta > 0.3 {
+   
+                
+                
+                
+//                mapInfoImageView.setVerticalAlignment(.center)
+                
+            } else if rotationalDelta < -0.3 {
+                
+                
+                
+            }
+            
+            isCrownRotating = true
+        }
+        
+        
+    }
+    
+    func crownDidBecomeIdle(_ crownSequencer: WKCrownSequencer?) {
+        isCrownRotating = false
+    }
+    
 }
 

@@ -69,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C64670722024415D006A7FAB /* AmeshWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AmeshWatch.entitlements; sourceTree = "<group>"; };
+		C64670732024416F006A7FAB /* AmeshWatch WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AmeshWatch WatchKit App.entitlements"; sourceTree = "<group>"; };
 		C65EF9DB2015825700B925AC /* AmeshWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmeshWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65EF9DE2015825700B925AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C65EF9E02015825700B925AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		C65EF9DD2015825700B925AC /* AmeshWatch */ = {
 			isa = PBXGroup;
 			children = (
+				C64670722024415D006A7FAB /* AmeshWatch.entitlements */,
 				C65EFA182015845700B925AC /* APIManager */,
 				C65EF9DE2015825700B925AC /* AppDelegate.swift */,
 				C65EF9E02015825700B925AC /* ViewController.swift */,
@@ -146,6 +149,7 @@
 		C65EF9F12015825700B925AC /* AmeshWatch WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				C64670732024416F006A7FAB /* AmeshWatch WatchKit App.entitlements */,
 				C65EF9F22015825700B925AC /* Interface.storyboard */,
 				C65EF9F52015825700B925AC /* Assets.xcassets */,
 				C65EF9F72015825700B925AC /* Info.plist */,
@@ -243,10 +247,20 @@
 					C65EF9DA2015825700B925AC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C65EF9EC2015825700B925AC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C65EF9FB2015825700B925AC = {
 						CreatedOnToolsVersion = 9.2;
@@ -486,7 +500,7 @@
 				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = "AmeshWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.AmeshWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -504,7 +518,7 @@
 				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = "AmeshWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.AmeshWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -519,11 +533,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AmeshWatch WatchKit App/AmeshWatch WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				IBSC_MODULE = AmeshWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "AmeshWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.AmeshWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -538,11 +553,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AmeshWatch WatchKit App/AmeshWatch WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				IBSC_MODULE = AmeshWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "AmeshWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.AmeshWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -556,12 +572,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AmeshWatch/AmeshWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = AmeshWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.AmeshWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,12 +589,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AmeshWatch/AmeshWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39KT36ZXK5;
 				INFOPLIST_FILE = AmeshWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.test.AmeshWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syam64.AmeshWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
